@@ -1,8 +1,10 @@
+package week1;
+
 /**
  * 두 정수 사이의 합
  */
 public class p12912_java_harin {
-    static class Solution {
+    public static class Solution {
         public long solution(int a, int b) {
             return sum(Math.min(a,b), Math.max(a,b));
         }
@@ -11,11 +13,8 @@ public class p12912_java_harin {
         }
     }
 
-    public class Main {
-        public static void main(String[] ars) {
-            Solution s = new Solution();
-            s.solution(3,5);
-        }
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        System.out.println(s.solution(3,5));
     }
-
 }

@@ -1,3 +1,5 @@
+package week1;
+
 /**
  * 문자열 내 p와 y의 개수
  */
@@ -18,10 +20,8 @@ public class p12916_java_harin {
             return answer;
         }
     }
-    public class Main {
-        public static void main(String[] ars) {
-            Solution s = new Solution();
-            s.solution("pPoooyY");
-        }
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        System.out.println(s.solution("pPoooyY"));
     }
 }
