@@ -2,6 +2,7 @@ package week2;
 import java.util.*;
 
 /**
+ * lv 2
  * 최댓값과 최솟값
  * stram api 사용하여 String 배열을 Integer 배열로 바꾼 후 최대최소 값 구했습니다.
  */

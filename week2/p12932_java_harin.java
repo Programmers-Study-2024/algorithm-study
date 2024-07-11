@@ -2,6 +2,7 @@ package week2;
 import java.util.*;
 
 /**
+ * lv 1
  * 자연수 뒤집어 배열로 만들기
  */
 public class p12932_java_harin {

@@ -1,6 +1,7 @@
 package week2;
 import java.util.*;
 /**
+ * lv 1
  * 정수 내림차순으로 배치하기
  * 1. long -> String
  * 2. 각각의 String -> Integer 배열

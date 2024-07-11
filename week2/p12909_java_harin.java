@@ -2,6 +2,7 @@ package week2;
 import java.util.*;
 
 /**
+ * lv 2
  * 올바른 괄호
  * () 쌍이 올바르다면, ( 인 경우 push, ) 인 경우 pop 했을 때 최종 스택이 비어있어야 합니다.
  */
