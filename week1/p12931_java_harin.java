@@ -1,7 +1,5 @@
 package week1;
-
 /**
- * 12931
  * 자릿수 더하기
  */
 public class p12931_java_harin {

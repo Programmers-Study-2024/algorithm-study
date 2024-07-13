@@ -1,5 +1,4 @@
 package week1;
-
 /**
  * 문자열 내 p와 y의 개수
  */
