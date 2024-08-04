@@ -25,6 +25,7 @@ public class p12910_java_minsu {
             answer[0] = -1;
         } else {
             answer = new int[count];
+
             count = 0;
             for(int i=0; i<arr.length; i++) {
                 if(arr[i] % divisor == 0) {
@@ -33,6 +34,7 @@ public class p12910_java_minsu {
                 }
             }
             for(int i=0; i<answer.length; i++) {
+                
                 for(int j=i+1; j<answer.length; j++) {
                     if(answer[i] > answer[j]) {
                         int temp = answer[i];
