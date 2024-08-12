@@ -1,4 +1,4 @@
-# 다른 사람의 풀이(O)
+# 연속 부분 수열 합의 개수(O)
 
 def solution(elements):
     combi = []
