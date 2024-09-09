@@ -1,4 +1,4 @@
-# 동영상 재생기
+# [PCCP 기출문제] 1번 / 동영상 재생기
 
 def solution(video_len, pos, op_start, op_end, commands):
     # 시간 -> 초
