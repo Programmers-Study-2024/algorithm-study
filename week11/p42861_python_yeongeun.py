@@ -16,7 +16,7 @@ def solution(n, costs):
             # y 연결되어있고, x 아직 방문 안했고
             elif y in bridge and x not in bridge:
                 answer += c
-                bridge.add(y)
+                bridge.add(x)
                 break           
 #        print(bridge)
 #        print(answer)
