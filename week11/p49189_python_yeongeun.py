@@ -10,7 +10,7 @@ def solution(n, edge):
     # 각 인덱스별 연결된 노드들 추가
     for e in edge:
         graph[e[0]].append(e[1])
-        graph[e[1]].append(e[0])        
+        graph[e[1]].append(e[0])
     # print(graph)
     # [[],[3,2],[3,1,4,5],[6,4,2,1],[3,2],[2],[3]]
     
