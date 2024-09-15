@@ -1,56 +1,44 @@
 package week11;
 
+import java.util.HashMap;
+
 public class p49993_java_donghui {
 
+    public int solution(String skill, String[] skill_trees) {
+        int answer = 0;
+
+        HashMap<Character, Boolean> map = new HashMap<>();
 
 
-    static int[] dx = {-1, 1, 0, 0};
-    static int[] dy = {0, 0, 1, -1};
+        for (String sk : skill_trees) {
+            for (char c : skill.toCharArray()) {
+                map.put(c, false);
+            }
 
-    public int solution(String dirs) {
+            boolean flag = false;
+            for (int i = 0; i < sk.length(); i++) {
+                char ch = sk.charAt(i);
+                if (map.containsKey(ch)) {
+                    int idx = 0;
+                    while (skill.charAt(idx) != ch) {
+                        if (!map.get(skill.charAt(idx))) {
+                            flag = true;
+                            break;
+                        }
+                        idx++;
+                    }
 
-        // 내 중심을 5,5로 생각
-        int[][] map = new int[11][11];
-        boolean[][][] visited = new boolean[11][11][4];       // 상하좌우 판별
+                    if (flag) break;
+                    else
+                        map.put(ch, true);
+                }
 
-        int answer = solve(dirs, map, visited, 5, 5);
+            }
 
+            if (!flag) answer++;
+
+        }
 
         return answer;
     }
-
-    static int solve(String dirs, int[][] map, boolean[][][] visited, int x, int y) {
-        int count = 0;
-        int idx = 0;
-        for (char c : dirs.toCharArray()) {
-            if (c == 'U') idx = 0;
-            else if (c == 'D') idx = 1;
-            else if (c == 'R') idx = 2;
-            else if (c == 'L') idx = 3;
-
-            int nx = x + dx[idx];
-            int ny = y + dy[idx];
-
-            if (nx < 0 || nx > 10 || ny < 0 || ny > 10) continue;
-
-            int reverseIdx = 0;
-            if (idx == 1 || idx == 3) {
-                reverseIdx = idx - 1;
-            } else {
-                reverseIdx = idx + 1;
-            }
-
-            if (!visited[x][y][idx] && !visited[nx][ny][reverseIdx]) {
-                visited[x][y][idx] = true;
-                visited[nx][ny][reverseIdx] = true;
-                count++;
-                // System.out.print(c+" ");
-            }
-            // 다음칸으로 이동
-            x = nx;
-            y = ny;
-        }
-        return count;
-    }
-
 }
