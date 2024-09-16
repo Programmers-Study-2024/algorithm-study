@@ -1,11 +1,11 @@
 package week11;
 import java.util.*;
-
+/**
+ * 고득점 kit - 스택/큐
+ *  기능개발
+ */
 public class p42586_java_harin {
-    /**
-     * 고득점 kit - 스택/큐
-     *  기능개발
-     */
+
     class Solution {
         public int[] solution(int[] progresses, int[] speeds) {
             ArrayList<Integer> arr = new ArrayList<>();
