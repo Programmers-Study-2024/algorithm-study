@@ -7,27 +7,30 @@ import java.util.*;
 public class p42883_java_harin {
     class Solution {
         public String solution(String number, int k) {
-            String answer = "";
-            Stack<Integer> stack = new Stack<>();
-            for (int i=0; i<number.length(); i++){
-                int num = Integer.parseInt(number.substring(i,i+1));
-                if (stack.isEmpty()){
-                    stack.push(num);
-                    continue;
+            Stack<Character> stack = new Stack<>();
+            for (int i = 0; i < number.length(); i++) {
+                char num = number.charAt(i);
+                // Stack이 비어 있으면 바로 push
+                while (!stack.isEmpty() && k > 0 && stack.peek() < num) {
+                    stack.pop();  // 스택의 마지막 요소가 현재 num보다 작을 때 pop
+                    k--;
                 }
-                if (k > 0){
-                    while (stack.peek() < num){
-                        stack.pop();
-                        k -= 1;
-                        if (stack.isEmpty() || k<=0) break;
-                    }
-                }
-                stack.push(num);
+                stack.push(num);  // 현재 num을 스택에 push
             }
-            for (int i : stack){
-                answer += i;
+
+            // k가 남아있으면 뒤에서 k개 만큼 제거
+            while (k > 0) {
+                stack.pop();
+                k--;
             }
-            return answer;
+
+            // Stack을 문자열로 변환
+            StringBuilder answer = new StringBuilder();
+            for (char c : stack) {
+                answer.append(c);
+            }
+
+            return answer.toString();
         }
     }
 }
